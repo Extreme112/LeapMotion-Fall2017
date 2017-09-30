@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour {
+public class EnemyHealth : MonoBehaviour {
     public int health;
 
-    public void takeDamage(int damage) {
+    public void TakeDamage(int damage) {
         health -= damage;
+        print(this.gameObject.name + ":" + health);
         if (health <= 0) {
             Destroy(gameObject);
         }
