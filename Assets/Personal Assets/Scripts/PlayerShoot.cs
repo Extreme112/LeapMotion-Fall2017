@@ -5,17 +5,23 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour {
 
     public GameObject bullet;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-    
-        if (Input.GetKeyDown(KeyCode.Q)) {
+    public float shootDelay;
+    Coroutine shootRoutine;
+
+    public void StartShooting() {
+        shootRoutine = StartCoroutine(StartShootingRoutine());
+    }
+
+    public void StopShooting() {
+        if (shootRoutine != null) {
+            StopCoroutine(shootRoutine);
+        }
+    }
+
+    IEnumerator StartShootingRoutine() {
+        while (true) {
+            yield return new WaitForSeconds(shootDelay);
             Instantiate(bullet, HandDirectionGetter.GetPositionOfRightHand(), Quaternion.identity);
         }
-
-	}
+    }
 }

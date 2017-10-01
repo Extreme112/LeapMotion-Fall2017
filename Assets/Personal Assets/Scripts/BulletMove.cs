@@ -6,6 +6,7 @@ public class BulletMove : MonoBehaviour {
 
     Vector3 direction;
     public float speed;
+    public int damage;
 	// Use this for initialization
 	void Start () {
         direction = HandDirectionGetter.getHandDirection("Right");
@@ -14,12 +15,15 @@ public class BulletMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Translate(direction * speed); //correct
-
-        //transform.Translate(HandDirectionGetter.getHandDirection("Right") * speed); //wrong
     }
 
-    //public void init(Vector3 direction, float speed) {
-    //    this.direction = direction;
-    //    this.speed = speed;
-    //}
+    private void OnCollisionEnter(Collision collision) {
+        GameObject hitObject = collision.gameObject;
+        if (hitObject.CompareTag("Enemy")) {
+            //deal damage
+            EnemyHealth eh = hitObject.GetComponent<EnemyHealth>();
+            eh.TakeDamage(damage);
+            Destroy(this.gameObject);
+        }
+    }
 }
