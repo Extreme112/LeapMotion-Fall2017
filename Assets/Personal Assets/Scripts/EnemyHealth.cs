@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
     public int health;
+    public int score;
 
     public void TakeDamage(int damage) {
         health -= damage;
-        print(this.gameObject.name + ":" + health);
         if (health <= 0) {
-            Destroy(gameObject);
+            //add points to ScoreManager
+            GameObject gm = GameObject.FindGameObjectWithTag("GameManager");
+            ScoreManager sm = gm.GetComponent<ScoreManager>();
+            sm.AddScore(score); //add score
+            Destroy(this.gameObject);
         }
     }
 }
