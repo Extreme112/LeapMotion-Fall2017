@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour {
 
     public GameObject bullet;
+<<<<<<< HEAD
     Coroutine shootRoutine;
     public float shootDelay;
 	// Use this for initialization
@@ -33,6 +34,25 @@ public class PlayerShoot : MonoBehaviour {
     public void StopShooting() {
         if (shootRoutine != null) {
             StopCoroutine(shootRoutine);
+=======
+    public float shootDelay;
+    Coroutine shootRoutine;
+
+    public void StartShooting() {
+        shootRoutine = StartCoroutine(StartShootingRoutine());
+    }
+
+    public void StopShooting() {
+        if (shootRoutine != null) {
+            StopCoroutine(shootRoutine);
+        }
+    }
+
+    IEnumerator StartShootingRoutine() {
+        while (true) {
+            yield return new WaitForSeconds(shootDelay);
+            Instantiate(bullet, HandDirectionGetter.GetPositionOfRightHand(), Quaternion.identity);
+>>>>>>> InClassWork
         }
     }
 }

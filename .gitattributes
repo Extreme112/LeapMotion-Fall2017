@@ -1,0 +1,2 @@
+Assets/LFS[[:space:]]Assets filter=lfs diff=lfs merge=lfs -text
+Assets/LFSAssets filter=lfs diff=lfs merge=lfs -text
