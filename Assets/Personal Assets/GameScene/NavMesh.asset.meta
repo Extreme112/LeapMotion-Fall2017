@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< InClassWork
 guid: 9cfd43d59bb359643ac13adfc0986124
 timeCreated: 1507415650
@@ -6,6 +7,10 @@ timeCreated: 1507415650
 guid: dd54f5996b66ee344970d61af05c8287
 timeCreated: 1508019499
 >>>>>>> End of Class 5
+=======
+guid: dd54f5996b66ee344970d61af05c8287
+timeCreated: 1508019499
+>>>>>>> catchUp
 licenseType: Free
 NativeFormatImporter:
   mainObjectFileID: 23800000
