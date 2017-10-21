@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1065882556372450, guid: 9c16800692a0aa74cb183c1f16bc0d67, type: 2}
-  shootDelay: 0.1
+  shootDelay: 1
 --- !u!114 &1023912430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2161,10 @@ Prefab:
     - target: {fileID: 4891269026145990, guid: 1896ca6237836224899ae7d093ff7648, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630933085286684, guid: 1896ca6237836224899ae7d093ff7648, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1896ca6237836224899ae7d093ff7648, type: 2}
