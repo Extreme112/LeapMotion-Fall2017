@@ -13,9 +13,4 @@ public class EnemyMove : MonoBehaviour {
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.SetDestination(player.transform.position);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
