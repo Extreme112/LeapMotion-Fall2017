@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< InClassWork
 guid: 8875598679491e147a2a977007f81b78
 timeCreated: 1507416601
+=======
+guid: d718f7d897777154a8d22127c1d4d85d
+timeCreated: 1508022080
+>>>>>>> End of Class 5
 licenseType: Free
 NativeFormatImporter:
   mainObjectFileID: 100100000
