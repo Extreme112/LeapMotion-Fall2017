@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
+
     int currentScore = 0;
 
     public void AddScore(int score) {
@@ -13,4 +14,6 @@ public class ScoreManager : MonoBehaviour {
     public int getScore() {
         return currentScore;
     }
+
+
 }

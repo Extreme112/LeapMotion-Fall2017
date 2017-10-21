@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour {
-
     public GameObject obj;
     public int count;
     public float delay;
