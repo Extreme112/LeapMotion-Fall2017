@@ -18,4 +18,9 @@ public class PlayerHealth : MonoBehaviour {
             SceneManager.LoadScene("StartScreen"); //load start scene on death
         }
     }
+
+    //Allows us to get the plyaers current health
+    public int getHealth() {
+        return currentHealth;
+    }
 }
