@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour {
         if (currentHealth <= 0) {
             //Death handling code
             //play a death sound, play a death animation, subract lives
-            SceneManager.LoadScene("GameScene"); //eventually go back to start screen
+            SceneManager.LoadScene("StartScreen"); //eventually go back to start screen
         }
     }
 

@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 136601253593525462}
   - component: {fileID: 23383704000757598}
   - component: {fileID: 114332086509435156}
-  - component: {fileID: 195208809317373802}
-  - component: {fileID: 114278419508942316}
-  - component: {fileID: 114302333743518770}
   - component: {fileID: 54837643071840162}
+  - component: {fileID: 195633508560783892}
+  - component: {fileID: 114622994926741386}
+  - component: {fileID: 114026964534191126}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114106518340366592
+--- !u!114 &114026964534191126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,30 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  score: 50
---- !u!114 &114367856292253750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324125931296678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afa20a0e96425148b4b4ffe149a4cc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114302333743518770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324125931296678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0718c9c6c35b0f040a3b8867223bdd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
+  score: 10
 --- !u!114 &114332086509435156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +126,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackValue: 100
+--- !u!114 &114622994926741386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324125931296678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afa20a0e96425148b4b4ffe149a4cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136601253593525462
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -162,7 +150,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &195549504755593642
+--- !u!195 &195633508560783892
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -171,7 +159,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
