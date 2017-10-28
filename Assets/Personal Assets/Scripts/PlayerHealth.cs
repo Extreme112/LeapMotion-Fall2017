@@ -19,4 +19,9 @@ public class PlayerHealth : MonoBehaviour {
             SceneManager.LoadScene("GameScene"); //eventually go back to start screen
         }
     }
+
+    //Allows us to get the plyaers current health
+    public int getHealth() {
+        return currentHealth;
+    }
 }
