@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Personal Assets/GameScene.unity
     guid: d222bdacae6ca054fa88fdc4f47a6152
+  - enabled: 1
+    path: Assets/Personal Assets/GameScene2.unity
+    guid: 5b50e79508c0c2b438f392e4af3eebe7
