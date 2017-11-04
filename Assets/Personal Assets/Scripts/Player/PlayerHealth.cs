@@ -7,13 +7,20 @@ public class PlayerHealth : MonoBehaviour {
     int maxHealth = 100;
     int currentHealth;
 
+    public AudioClip hurtSound;
+    private AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
         currentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
 	}
 
     public void TakeDamage(int damage) {
         currentHealth -= damage;
+        audioSource.clip = hurtSound;
+        audioSource.Stop();
+        audioSource.Play();
         if (currentHealth <= 0) {
             SceneManager.LoadScene("StartScreen"); //load start scene on death
         }
