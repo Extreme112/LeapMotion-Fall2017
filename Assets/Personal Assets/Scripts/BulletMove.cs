@@ -24,6 +24,12 @@ public class BulletMove : MonoBehaviour {
             EnemyHealth eh = hitObject.GetComponent<EnemyHealth>();
             eh.TakeDamage(damage);
             Destroy(this.gameObject);
+        } 
+        else if (hitObject.CompareTag("Zombie")) {
+            //deal damage
+            ZombieHealth eh = hitObject.GetComponent<ZombieHealth>();
+            eh.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
     }
 }

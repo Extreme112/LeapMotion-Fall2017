@@ -10,6 +10,7 @@ public class ZombieHealth : MonoBehaviour {
     //Animation
     Animator anim;
     private float deathAnimLength;
+    private bool canTakeDamage = true;
 
     private void Start() {
         gm = GameObject.FindGameObjectWithTag("GameManager");
@@ -26,12 +27,15 @@ public class ZombieHealth : MonoBehaviour {
     }
 
     public void TakeDamage(int damage) {
-        health -= damage;
-        if (health <= 0) {
-            //Add Score
-            ScoreManager sm = gm.GetComponent<ScoreManager>();
-            sm.AddScore(score);
-            StartCoroutine(Die());
+        if (canTakeDamage) {
+            health -= damage;
+            if (health <= 0) {
+                //Add Score
+                ScoreManager sm = gm.GetComponent<ScoreManager>();
+                sm.AddScore(score);
+                StartCoroutine(Die());
+                canTakeDamage = false;
+            }
         }
     }
 
