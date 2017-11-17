@@ -24,6 +24,12 @@ public class BulletMove : MonoBehaviour {
             EnemyHealth eh = hitObject.GetComponent<EnemyHealth>();
             eh.TakeDamage(damage);
             Destroy(this.gameObject);
+        } 
+        else if (hitObject.CompareTag("Zombie")) {   //account for the bullet hitting a Zombie
+            print("Zombie hit");
+            ZombieHealth zh = hitObject.GetComponent<ZombieHealth>();
+            zh.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
     }
 }
